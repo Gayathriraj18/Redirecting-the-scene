@@ -32,7 +32,8 @@ Click the Build and run button in the Build settings and run the scene.
 Step 9:
 The Sphere after touching the cube it will disappeared and Press the key [R] the redircting to the new scene that is page2.
 
-Program:
+# Program:
+```
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -71,7 +72,7 @@ public class cubeprog : MonoBehaviour
         }
     }
 }
-
+```
 
 ## Program:
   ~~~
