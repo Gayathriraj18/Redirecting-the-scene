@@ -33,7 +33,7 @@ Step 9:
 The Sphere after touching the cube it will disappeared and Press the key [R] the redircting to the new scene that is page2.
 
 # Program:
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -73,48 +73,6 @@ public class cubeprog : MonoBehaviour
     }
 }
 ```
-
-## Program:
-  ~~~
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine;
-
-
-public class cubeprog : MonoBehaviour
-{
-    Rigidbody rb;
-    public GameObject WinText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>(); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("level2");
-        }
-        
-    }
-    public void OnMouseDown()
-    {
-        Destroy(gameObject);
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag=="cube")
-        {
-            Destroy(collision.gameObject);
-            WinText.SetActive(true);
-        }
-    }
-}
-~~~
 ## Output:
   ![K1](https://github.com/Gayathriraj18/Redirecting-the-scene/assets/94154854/193c4fae-1a62-4813-8c8e-4291e9ddbcfa)
 ![K2](https://github.com/Gayathriraj18/Redirecting-the-scene/assets/94154854/b64bd073-829b-405b-adbc-41a16d228280)
